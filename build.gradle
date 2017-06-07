@@ -21,5 +21,18 @@ android {
         }
     }
 
-    publishNonDefault true
+    // Temporary pending
+    // https://issuetracker.google.com/issues/62170415
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            debuggable false
+        }
+        unsigned {
+            minifyEnabled false
+            signingConfig null
+            debuggable false
+        }
+    }
 }
